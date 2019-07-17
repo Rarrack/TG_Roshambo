@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RPSCode : MonoBehaviour
 {
+    #region Decision Variables
     Choice playerChoice = new Choice();
     Choice aiChoice = new Choice();
     int playerPoints = 0;
@@ -12,15 +13,29 @@ public class RPSCode : MonoBehaviour
     int winner = 0;
     bool endGame = false;
     int testWaitTime = 0;
+    #endregion
 
-    public UnityEngine.UI.Text playerScore;
-    public UnityEngine.UI.Text aiScore;
-    public UnityEngine.UI.Text playerResult;
-    public UnityEngine.UI.Text aiResult;
+    #region Public Game World Variables
+    public GameObject[] backgrounds;
+
+    public UnityEngine.UI.Text[] gameTexts;
+    public Sprite[] playerSprites;
+    public Sprite[] aiSprites;
+    public Sprite[] choicesSprites;
 
     GameObject gameScreen;
     GameObject actionScreen;
     GameObject resultScreen;
+
+    public GameObject playerSprite;
+    public GameObject playerProfile;
+    public GameObject playerDecision;
+
+    public GameObject aiSprite;
+    public GameObject aiProfile;
+    public GameObject aiDecision;
+
+    #endregion
 
     enum State
     {
@@ -34,11 +49,14 @@ public class RPSCode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Random.InitState(System.DateTime.Now.Millisecond);
         gameScreen = GameObject.Find("Game Canvas");
         actionScreen = GameObject.Find("Action Canvas");
         actionScreen.SetActive(false);
         resultScreen = GameObject.Find("Result Screen");
         resultScreen.SetActive(false);
+
+        SetBackground();
     }
 
     // Update is called once per frame
@@ -53,10 +71,12 @@ public class RPSCode : MonoBehaviour
                     state = State.Action;
                     gameScreen.SetActive(false);
                     actionScreen.SetActive(true);
-                    Debug.Log("Action Screen Initiated");
+                    DecisionDraw();
                 }
                 break;
             case State.Action:
+                //Mateusz TODO:: Get animations on attack to run here depending on the attack
+                //Make sure to switch state variable to State.Result at the end of the animation
                 testWaitTime += 1;
                 if (testWaitTime >= 100)
                 {
@@ -64,7 +84,7 @@ public class RPSCode : MonoBehaviour
                     state = State.Result;
                     actionScreen.SetActive(false);
                     resultScreen.SetActive(true);
-                    Debug.Log("Result Screen Initiated");
+                    
                 }
                 break;
             case State.Result:
@@ -74,22 +94,33 @@ public class RPSCode : MonoBehaviour
                     {
                         case 0:
                             //Tie
-                            playerResult.text = "A Tie?!";
-                            aiResult.text = "A Tie?!";
+                            playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[7];
+                            aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[7];
+                            gameTexts[4].text = "A Tie?!";
+                            gameTexts[5].text = "A Tie?!";
+                            winner = 3;
                             break;
                         case 1:
                             //Win
-                            playerResult.text = "Point for me!";
-                            aiResult.text = "You win this round...";
                             playerPoints += 1;
-                            playerScore.text = playerPoints.ToString();
+                            gameTexts[0].text = playerPoints.ToString();
+                            gameTexts[1].text = playerPoints.ToString();
+                            aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[7];
+                            gameTexts[4].text = "Point for me!";
+                            gameTexts[5].text = "You win this round...";
+                            winner = 3;
                             break;
                         case 2:
                             //Lose
-                            playerResult.text = "Darnit";
-                            aiResult.text = "Oh yeah!";
                             aiPoints += 1;
-                            aiScore.text = aiPoints.ToString();
+                            gameTexts[2].text = aiPoints.ToString();
+                            gameTexts[3].text = aiPoints.ToString();
+                            playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[7];
+                            gameTexts[4].text = "Darnit";
+                            gameTexts[5].text = "Oh yeah!";
+                            winner = 3;
+                            break;
+                        default:
                             break;
                     }
                 }
@@ -98,69 +129,28 @@ public class RPSCode : MonoBehaviour
                     if (playerPoints > aiPoints)
                     {
                         //Victory
-                        playerResult.text = "Good game!";
-                        aiResult.text = "I'll win next time...";
+                        playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[6];
+                        playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[4];
+                        aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[8];
+                        aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[3];
+                        gameTexts[4].text = "Good game!";
+                        gameTexts[5].text = "I'll win next time...";
                         endGame = true;
                     }
                     else
                     {
                         //Defeat
-                        playerResult.text = "Ouch, that was rough...";
-                        aiResult.text = "Better luck next time!";
+                        playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[8];
+                        playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[3];
+                        aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[6];
+                        aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[4];
+                        gameTexts[4].text = "Ouch, that was rough...";
+                        gameTexts[5].text = "Better luck next time!";
                         endGame = true;
                     }
                 }
                 break;
         }
-        #region Old Code
-        /*
-        if (playerPoints != 3 || aiPoints != 3)
-        {
-            if (playing == true)
-            {
-                if (playerChoice.Selected != Choice.Choices.Undecided)
-                {
-                    AndTheWinnerIs();
-                }
-            }
-            else
-            {
-                switch (winner)
-                {
-                    case 0:
-                        //result.text = "Tie";
-                        playerResult.text = "A Tie?!";
-                        aiResult.text = "A Tie?!";
-                        playing = true;
-                        break;
-                    case 1:
-                        playerResult.text = "Point for me!";
-                        aiResult.text = "You win this round...";
-                        playing = true;
-                        break;
-                    case 2:
-                        playerResult.text = "Darnit";
-                        aiResult.text = "Oh yeah!";
-                        playing = true;
-                        break;
-                }
-            }
-        }
-        else
-        {
-            if(playerPoints > aiPoints)
-            {
-                playerResult.text = "Good game!";
-                aiResult.text = "I'll win next time...";
-            }
-            else
-            {
-                playerResult.text = "Ouch, that was rough...";
-                aiResult.text = "Better luck next time!";
-            }
-        }
-        */
-        #endregion
     }
 
     public void Choose(int choice)
@@ -168,45 +158,83 @@ public class RPSCode : MonoBehaviour
         switch(choice)
         {
             case 0:
-                playerChoice.Selected = Choice.Choices.Rock;
+                playerChoice.Selected = Choice.Choices.Fire;
                 break;
             case 1:
-                playerChoice.Selected = Choice.Choices.Paper;
+                playerChoice.Selected = Choice.Choices.Earth;
                 break;
             case 2:
-                playerChoice.Selected = Choice.Choices.Scissor;
+                playerChoice.Selected = Choice.Choices.Water;
                 break;
         }
-
-        Debug.Log("You Chose: " + playerChoice.Selected.ToString());
     }
 
     private void AndTheWinnerIs()
     {
         aiChoice.AIChoice();
-        Debug.Log("Enemy Picked: " + aiChoice.Selected.ToString());
 
         switch (playerChoice.CheckWinner(aiChoice.Selected))
         {
             case 0:
-                Debug.Log("You Win!!!");
                 winner = 1;
                 break;
             case 1:
-                Debug.Log("Tie");
                 winner = 0;
                 break;
             case 2:
-                Debug.Log("You Lose");
                 winner = 2;
                 break;
             default:
                 Debug.Log("Uh Oh...");
                 break;
         }
+    }
 
+    void DecisionDraw()
+    {
+        switch (playerChoice.Selected)
+        {
+            case Choice.Choices.Fire:
+                playerDecision.GetComponent<UnityEngine.UI.Image>().sprite = choicesSprites[0];
+                break;
+            case Choice.Choices.Earth:
+                playerDecision.GetComponent<UnityEngine.UI.Image>().sprite = choicesSprites[1];
+                break;
+            case Choice.Choices.Water:
+                playerDecision.GetComponent<UnityEngine.UI.Image>().sprite = choicesSprites[2];
+                break;
+        }
+        switch (aiChoice.Selected)
+        {
+            case Choice.Choices.Fire:
+                aiDecision.GetComponent<UnityEngine.UI.Image>().sprite = choicesSprites[0];
+                break;
+            case Choice.Choices.Earth:
+                aiDecision.GetComponent<UnityEngine.UI.Image>().sprite = choicesSprites[1];
+                break;
+            case Choice.Choices.Water:
+                aiDecision.GetComponent<UnityEngine.UI.Image>().sprite = choicesSprites[2];
+                break;
+        }
         playerChoice.Selected = Choice.Choices.Undecided;
         aiChoice.Selected = Choice.Choices.Undecided;
+    }
+
+    void SetBackground()
+    {
+        foreach(GameObject back in backgrounds)
+        {
+            back.SetActive(false);
+        }
+
+        if (Random.Range(1, 100) % 2 == 0)
+        {
+            backgrounds[Random.Range(1, 3) % 3].SetActive(true);
+        }
+        else
+        {
+            backgrounds[Random.Range(0, 2)].SetActive(true);
+        }
     }
 
     public void BackToGame(bool back)
@@ -218,14 +246,20 @@ public class RPSCode : MonoBehaviour
         resultScreen.SetActive(back);
         gameScreen.SetActive(true);
         state = State.Game;
-        Debug.Log("Game Screen Initiated");
+        playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[5];
+        playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
+        aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[5];
+        aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
     }
 
-    public void ResetGame()
+    void ResetGame()
     {
         playerPoints = 0;
-        playerScore.text = "0";
+        gameTexts[0].text = "0";
+        gameTexts[1].text = "0";
         aiPoints = 0;
-        aiScore.text = "0";
+        gameTexts[2].text = "0";
+        gameTexts[3].text = "0";
+        endGame = false;
     }
 }

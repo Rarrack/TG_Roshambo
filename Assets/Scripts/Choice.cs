@@ -6,9 +6,9 @@ public class Choice
 {
     public enum Choices
     {
-        Rock,
-        Paper,
-        Scissor,
+        Fire,
+        Earth,
+        Water,
         Undecided
     }
 
@@ -27,18 +27,28 @@ public class Choice
 
     public void AIChoice()
     {
-        int choice = Random.Range(1, 3) % 3;
+        Random.InitState(System.DateTime.Now.Millisecond);
+        int choice = 0;
+
+        if(Random.Range(1,100) % 2 == 0)
+        {
+            choice = Random.Range(1, 3) % 3;
+        }
+        else
+        {
+            choice = Random.Range(0, 2);
+        }
 
         switch (choice)
         {
             case 0:
-                selected = Choices.Rock;
+                selected = Choices.Fire;
                 break;
             case 1:
-                selected = Choices.Paper;
+                selected = Choices.Earth;
                 break;
             case 2:
-                selected = Choices.Scissor;
+                selected = Choices.Water;
                 break;
         }
     }
@@ -50,44 +60,44 @@ public class Choice
         // 0 = Win, 1 = Tie, 2 = Lose
         switch (selected)
         {
-            case Choices.Rock:
-                if(AiChoice == Choices.Rock)
+            case Choices.Fire:
+                if(AiChoice == Choices.Fire)
                 {
                     outcome = 1;
                 }
-                if (AiChoice == Choices.Paper)
+                if (AiChoice == Choices.Water)
                 {
                     outcome = 2;
                 }
-                if (AiChoice == Choices.Scissor)
+                if (AiChoice == Choices.Earth)
                 {
                     outcome = 0;
                 }
                 break;
-            case Choices.Paper:
-                if (AiChoice == Choices.Rock)
+            case Choices.Earth:
+                if (AiChoice == Choices.Water)
                 {
                     outcome = 0;
                 }
-                if (AiChoice == Choices.Paper)
+                if (AiChoice == Choices.Earth)
                 {
                     outcome = 1;
                 }
-                if (AiChoice == Choices.Scissor)
+                if (AiChoice == Choices.Fire)
                 {
                     outcome = 2;
                 }
                 break;
-            case Choices.Scissor:
-                if (AiChoice == Choices.Rock)
+            case Choices.Water:
+                if (AiChoice == Choices.Earth)
                 {
                     outcome = 2;
                 }
-                if (AiChoice == Choices.Paper)
+                if (AiChoice == Choices.Fire)
                 {
                     outcome = 0;
                 }
-                if (AiChoice == Choices.Scissor)
+                if (AiChoice == Choices.Water)
                 {
                     outcome = 1;
                 }

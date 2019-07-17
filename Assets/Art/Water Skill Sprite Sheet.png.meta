@@ -1,7 +1,76 @@
 fileFormatVersion: 2
 guid: 0013141a5d8a6d145a508808bb331faf
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4149123809982248350
+    second: Water Skill Sprite Sheet_0
+  - first:
+      213: -2237365849677906803
+    second: Water Skill Sprite Sheet_1
+  - first:
+      213: 3713681300592908647
+    second: Water Skill Sprite Sheet_2
+  - first:
+      213: 4023290226977029720
+    second: Water Skill Sprite Sheet_3
+  - first:
+      213: -4062018103300768047
+    second: Water Skill Sprite Sheet_4
+  - first:
+      213: 8763707843906994098
+    second: Water Skill Sprite Sheet_5
+  - first:
+      213: -7949585688274393306
+    second: Water Skill Sprite Sheet_6
+  - first:
+      213: 9144012222762934065
+    second: Water Skill Sprite Sheet_7
+  - first:
+      213: -7057024413929220365
+    second: Water Skill Sprite Sheet_8
+  - first:
+      213: 2550890553543183310
+    second: Water Skill Sprite Sheet_9
+  - first:
+      213: 3139465819997289900
+    second: Water Skill Sprite Sheet_10
+  - first:
+      213: -1398140648494729552
+    second: Water Skill Sprite Sheet_11
+  - first:
+      213: 1395387905804777851
+    second: Water Skill Sprite Sheet_12
+  - first:
+      213: -6316074456342410144
+    second: Water Skill Sprite Sheet_13
+  - first:
+      213: -7257704700982893368
+    second: Water Skill Sprite Sheet_14
+  - first:
+      213: 6841190141080644862
+    second: Water Skill Sprite Sheet_15
+  - first:
+      213: 3148422897527523625
+    second: Water Skill Sprite Sheet_16
+  - first:
+      213: -7813398772489476957
+    second: Water Skill Sprite Sheet_17
+  - first:
+      213: 458531217835612552
+    second: Water Skill Sprite Sheet_18
+  - first:
+      213: 8772039061572752088
+    second: Water Skill Sprite Sheet_19
+  - first:
+      213: 1301691948937427263
+    second: Water Skill Sprite Sheet_20
+  - first:
+      213: -1488615886210666708
+    second: Water Skill Sprite Sheet_21
+  - first:
+      213: -2965729114778773014
+    second: Water Skill Sprite Sheet_22
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +109,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,9 +138,547 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 830
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3a1df1d2346fe4ba5f3ea987f7d82c
+      internalID: 4149123809982248350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 830
+        width: 69
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926119758dd0ada4a994672c02d8b3e1
+      internalID: -2237365849677906803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 824
+        width: 78
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb9543d67df18a488b45df9d76fe9e3
+      internalID: 3713681300592908647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 810
+        width: 91
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cac31711a892e49b9df5561ffbff37
+      internalID: 4023290226977029720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 808
+        width: 93
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea724a2371d9994391dda9ab68b3347
+      internalID: -4062018103300768047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 616
+        width: 94
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17d9570a4559a84c8345ce498777799
+      internalID: 8763707843906994098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 625
+        width: 100
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04507e88e7980ec4ea4984fd0531735d
+      internalID: -7949585688274393306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 626
+        width: 105
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062381b4f6338e74ea4ee5c5e18dd6e4
+      internalID: 9144012222762934065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 623
+        width: 109
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5029559e322b0c04b98aedcaaddb8583
+      internalID: -7057024413929220365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 618
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce8b30bc2aeb58459a972770eb12586
+      internalID: 2550890553543183310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 424
+        width: 109
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226977481b68fec4cb83cbf6b9d74f3b
+      internalID: 3139465819997289900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 464
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1624dbaf35d52ff4f8520844edd00d9f
+      internalID: -1398140648494729552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 456
+        width: 71
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462a356a27f4232499f9a19e7eeebdc1
+      internalID: 1395387905804777851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 448
+        width: 105
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e70ed0a9b2130f4ba836bb4b98a3f3a
+      internalID: -6316074456342410144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 435
+        width: 132
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89883c11e6a685045af3367b00f4fe61
+      internalID: -7257704700982893368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 232
+        width: 126
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa332115f1aab347b9a39902968e9f1
+      internalID: 6841190141080644862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 217
+        width: 125
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1a60935d4a47c49b242d6847b631a9
+      internalID: 3148422897527523625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 242
+        width: 144
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fbdcd4b8f86fa40b3dad95e5912607
+      internalID: -7813398772489476957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 228
+        width: 133
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c107cee63955b740a6b0ac4f0ca2cfd
+      internalID: 458531217835612552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 223
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf4983058e660246aedba1f320ee4db
+      internalID: 8772039061572752088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 49
+        width: 91
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279024240ca64fe48830dd5280c43988
+      internalID: 1301691948937427263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 48
+        width: 92
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19bff90cabd6dac4a99bba191e179ebe
+      internalID: -1488615886210666708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water Skill Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 38
+        width: 111
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357785b9a157c8f4fb86c022737859f9
+      internalID: -2965729114778773014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
