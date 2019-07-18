@@ -96,8 +96,8 @@ public class RPSCode : MonoBehaviour
                             //Tie
                             playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[7];
                             aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[7];
-                            gameTexts[4].text = "A Tie?!";
-                            gameTexts[5].text = "A Tie?!";
+                            gameTexts[4].text = "That was so close!";
+                            gameTexts[5].text = "You got lucky...";
                             winner = 3;
                             break;
                         case 1:
@@ -106,8 +106,8 @@ public class RPSCode : MonoBehaviour
                             gameTexts[0].text = playerPoints.ToString();
                             gameTexts[1].text = playerPoints.ToString();
                             aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[7];
-                            gameTexts[4].text = "Point for me!";
-                            gameTexts[5].text = "You win this round...";
+                            gameTexts[4].text = "Good game!";
+                            gameTexts[5].text = "I'll win next time for sure...";
                             winner = 3;
                             break;
                         case 2:
@@ -116,8 +116,8 @@ public class RPSCode : MonoBehaviour
                             gameTexts[2].text = aiPoints.ToString();
                             gameTexts[3].text = aiPoints.ToString();
                             playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[7];
-                            gameTexts[4].text = "Darnit";
-                            gameTexts[5].text = "Oh yeah!";
+                            gameTexts[4].text = "Ouch, that was rough...";
+                            gameTexts[5].text = "Better luck next time.";
                             winner = 3;
                             break;
                         default:
@@ -133,8 +133,8 @@ public class RPSCode : MonoBehaviour
                         playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[4];
                         aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[8];
                         aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[3];
-                        gameTexts[4].text = "Good game!";
-                        gameTexts[5].text = "I'll win next time...";
+                        gameTexts[4].text = "No problem for a True Hero!";
+                        gameTexts[5].text = "I can't believe that I lost...";
                         endGame = true;
                     }
                     else
@@ -144,8 +144,8 @@ public class RPSCode : MonoBehaviour
                         playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[3];
                         aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[6];
                         aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[4];
-                        gameTexts[4].text = "Ouch, that was rough...";
-                        gameTexts[5].text = "Better luck next time!";
+                        gameTexts[4].text = "How could I lose to you...?";
+                        gameTexts[5].text = "Did you actually think you could win?";
                         endGame = true;
                     }
                 }
