@@ -26,6 +26,12 @@ TextureImporter:
   - first:
       213: -8652205296363721733
     second: Fire Skill Sprite Sheet_7
+  - first:
+      213: 14383654909467909
+    second: Fire Skill Sprite Sheet_8
+  - first:
+      213: -9061253392022487382
+    second: Fire Skill Sprite Sheet_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -155,18 +161,18 @@ TextureImporter:
       name: Fire Skill Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 224
-        width: 59
-        height: 72
+        x: 0
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 544ea8553b277a246b9d3d3186d078e4
+      spriteID: 0c2a87fc5885b4b44825c61fda37315e
       internalID: 924375428940817528
       vertices: []
       indices: 
@@ -176,18 +182,18 @@ TextureImporter:
       name: Fire Skill Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 224
-        y: 212
-        width: 128
-        height: 136
+        x: 192
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9627d9abbf02b242aea06090e0de029
+      spriteID: 6ae6e7d79e8cba648b8441399686ef17
       internalID: 2964541694060581947
       vertices: []
       indices: 
@@ -197,18 +203,18 @@ TextureImporter:
       name: Fire Skill Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 404
-        y: 191
-        width: 164
-        height: 193
+        x: 384
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74d261a28b0858d4dabc9f37d408c080
+      spriteID: 6f6f6b4741ddb5945a859fe868f251b4
       internalID: -5535084447982083143
       vertices: []
       indices: 
@@ -218,18 +224,18 @@ TextureImporter:
       name: Fire Skill Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 592
-        y: 196
-        width: 172
-        height: 186
+        x: 576
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e49353f11ca516645837883016955c3c
+      spriteID: 2b6288127ef6e8b43aa14b110057da05
       internalID: 748161447218801021
       vertices: []
       indices: 
@@ -239,19 +245,40 @@ TextureImporter:
       name: Fire Skill Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 776
-        y: 191
-        width: 183
-        height: 183
+        x: 768
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 150f762b23164644995920a6740baa39
+      spriteID: 679384ab66ed8844392709b96a6315d0
       internalID: -7417476963916004596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Skill Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26c703222a669f4bb9aa477f2290b7c
+      internalID: -1699230880474403732
       vertices: []
       indices: 
       edges: []
@@ -260,18 +287,18 @@ TextureImporter:
       name: Fire Skill Sprite Sheet_6
       rect:
         serializedVersion: 2
-        x: 8
-        y: 1
-        width: 184
-        height: 178
+        x: 192
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e2bab60961665f4dbe47e7d522b0350
+      spriteID: b01d23719bfec564c8e161c99a273f61
       internalID: 1470938214769086360
       vertices: []
       indices: 
@@ -281,19 +308,61 @@ TextureImporter:
       name: Fire Skill Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 240
-        y: 64
-        width: 4
-        height: 18
+        x: 384
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 603cb768b46fa9b4aa745153caf5174f
+      spriteID: a64a041f90e26714eb8a4c26370b03a1
       internalID: -8652205296363721733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Skill Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca15f505d15ab84f83464f70910497f
+      internalID: 14383654909467909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Skill Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b162575d6cc7b41bac21e177e0dccc
+      internalID: -9061253392022487382
       vertices: []
       indices: 
       edges: []

@@ -35,6 +35,9 @@ public class RPSCode : MonoBehaviour
     public GameObject aiProfile;
     public GameObject aiDecision;
 
+    public Animator a;
+    public Animator p;
+
     #endregion
 
     enum State
@@ -173,7 +176,7 @@ public class RPSCode : MonoBehaviour
     {
         aiChoice.AIChoice();
 
-        switch (playerChoice.CheckWinner(aiChoice.Selected))
+        switch (playerChoice.CheckWinner(aiChoice.Selected, a, p))
         {
             case 0:
                 winner = 1;

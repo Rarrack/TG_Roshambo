@@ -53,7 +53,7 @@ public class Choice
         }
     }
 
-    public int CheckWinner(Choices AiChoice)
+    public int CheckWinner(Choices AiChoice, Animator a, Animator p)
     {
         int outcome = 3;
 
@@ -68,16 +68,19 @@ public class Choice
                 if (AiChoice == Choices.Water)
                 {
                     outcome = 2;
+                    a.Play("Anim_water");
                 }
                 if (AiChoice == Choices.Earth)
                 {
                     outcome = 0;
+                    p.Play("Anim_fire");
                 }
                 break;
             case Choices.Earth:
                 if (AiChoice == Choices.Water)
                 {
                     outcome = 0;
+                    p.Play("Anim_earth");
                 }
                 if (AiChoice == Choices.Earth)
                 {
@@ -86,16 +89,19 @@ public class Choice
                 if (AiChoice == Choices.Fire)
                 {
                     outcome = 2;
+                    a.Play("Anim_fire");
                 }
                 break;
             case Choices.Water:
                 if (AiChoice == Choices.Earth)
                 {
                     outcome = 2;
+                    a.Play("Anim_earth");
                 }
                 if (AiChoice == Choices.Fire)
                 {
                     outcome = 0;
+                    p.Play("Anim_water");
                 }
                 if (AiChoice == Choices.Water)
                 {

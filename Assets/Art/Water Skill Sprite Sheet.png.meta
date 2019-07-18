@@ -200,10 +200,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 830
-        width: 66
-        height: 47
+        x: 0
+        y: 768
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,7 +211,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c3a1df1d2346fe4ba5f3ea987f7d82c
+      spriteID: 03504877a60710e44a3a94b417600dd7
       internalID: 4149123809982248350
       vertices: []
       indices: 
@@ -221,10 +221,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 260
-        y: 830
-        width: 69
-        height: 62
+        x: 192
+        y: 768
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,7 +232,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 926119758dd0ada4a994672c02d8b3e1
+      spriteID: 9011bc85bf872ec48bba7f99056e17ec
       internalID: -2237365849677906803
       vertices: []
       indices: 
@@ -242,10 +242,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 443
-        y: 824
-        width: 78
-        height: 67
+        x: 384
+        y: 768
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,7 +253,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fb9543d67df18a488b45df9d76fe9e3
+      spriteID: 0ea9c2c23cb627a47aede5ae99333096
       internalID: 3713681300592908647
       vertices: []
       indices: 
@@ -263,10 +263,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 630
-        y: 810
-        width: 91
-        height: 95
+        x: 576
+        y: 768
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,7 +274,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63cac31711a892e49b9df5561ffbff37
+      spriteID: a0c9718dedd2d9f40a83769762b46c5c
       internalID: 4023290226977029720
       vertices: []
       indices: 
@@ -284,10 +284,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 820
-        y: 808
-        width: 93
-        height: 99
+        x: 768
+        y: 768
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,7 +295,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cea724a2371d9994391dda9ab68b3347
+      spriteID: 4202942a358e28b4e8408f80211dc6cf
       internalID: -4062018103300768047
       vertices: []
       indices: 
@@ -305,10 +305,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 52
-        y: 616
-        width: 94
-        height: 98
+        x: 0
+        y: 576
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,7 +316,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b17d9570a4559a84c8345ce498777799
+      spriteID: 3946cb33a4bfb7449ab87e9701b07dee
       internalID: 8763707843906994098
       vertices: []
       indices: 
@@ -326,10 +326,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_6
       rect:
         serializedVersion: 2
-        x: 235
-        y: 625
-        width: 100
-        height: 92
+        x: 192
+        y: 576
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,7 +337,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04507e88e7980ec4ea4984fd0531735d
+      spriteID: a7f95e9bdf1577749a0decc440d9a9c0
       internalID: -7949585688274393306
       vertices: []
       indices: 
@@ -347,10 +347,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 424
-        y: 626
-        width: 105
-        height: 93
+        x: 384
+        y: 576
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,7 +358,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 062381b4f6338e74ea4ee5c5e18dd6e4
+      spriteID: 32240956647b8c649af53306b673bc66
       internalID: 9144012222762934065
       vertices: []
       indices: 
@@ -368,10 +368,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_8
       rect:
         serializedVersion: 2
-        x: 615
-        y: 623
-        width: 109
-        height: 98
+        x: 576
+        y: 576
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,7 +379,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5029559e322b0c04b98aedcaaddb8583
+      spriteID: 73ca5de50a65b2545bea79360c64ab41
       internalID: -7057024413929220365
       vertices: []
       indices: 
@@ -389,10 +389,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_9
       rect:
         serializedVersion: 2
-        x: 813
-        y: 618
-        width: 105
-        height: 106
+        x: 768
+        y: 576
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,7 +400,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ce8b30bc2aeb58459a972770eb12586
+      spriteID: 0b40d4fc00eb116488990fcf30c2844e
       internalID: 2550890553543183310
       vertices: []
       indices: 
@@ -410,10 +410,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_10
       rect:
         serializedVersion: 2
-        x: 44
-        y: 424
-        width: 109
-        height: 108
+        x: 0
+        y: 384
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,7 +421,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 226977481b68fec4cb83cbf6b9d74f3b
+      spriteID: 5a2510c87ab58e649820c8c2db5ab182
       internalID: 3139465819997289900
       vertices: []
       indices: 
@@ -431,10 +431,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_11
       rect:
         serializedVersion: 2
-        x: 273
-        y: 464
-        width: 33
-        height: 31
+        x: 192
+        y: 384
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -442,7 +442,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1624dbaf35d52ff4f8520844edd00d9f
+      spriteID: 5f8161fb41b3c4847af3f0b4677f4372
       internalID: -1398140648494729552
       vertices: []
       indices: 
@@ -452,10 +452,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_12
       rect:
         serializedVersion: 2
-        x: 447
-        y: 456
-        width: 71
-        height: 56
+        x: 384
+        y: 384
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -463,7 +463,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 462a356a27f4232499f9a19e7eeebdc1
+      spriteID: 1c99acf0bbefaff42ab7f50b3e8b179f
       internalID: 1395387905804777851
       vertices: []
       indices: 
@@ -473,10 +473,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_13
       rect:
         serializedVersion: 2
-        x: 623
-        y: 448
-        width: 105
-        height: 80
+        x: 576
+        y: 384
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,7 +484,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e70ed0a9b2130f4ba836bb4b98a3f3a
+      spriteID: bae6c74d8840045478bd082c9200c46c
       internalID: -6316074456342410144
       vertices: []
       indices: 
@@ -494,10 +494,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_14
       rect:
         serializedVersion: 2
-        x: 802
-        y: 435
-        width: 132
-        height: 105
+        x: 768
+        y: 384
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,7 +505,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89883c11e6a685045af3367b00f4fe61
+      spriteID: 979b05a8b3776c441bac076a699de490
       internalID: -7257704700982893368
       vertices: []
       indices: 
@@ -515,10 +515,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_15
       rect:
         serializedVersion: 2
-        x: 28
-        y: 232
-        width: 126
-        height: 123
+        x: 0
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -526,7 +526,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caa332115f1aab347b9a39902968e9f1
+      spriteID: 1f2baa33b61c61444ac26381b0d4d639
       internalID: 6841190141080644862
       vertices: []
       indices: 
@@ -536,10 +536,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_16
       rect:
         serializedVersion: 2
-        x: 235
-        y: 217
-        width: 125
-        height: 148
+        x: 192
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -547,7 +547,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b1a60935d4a47c49b242d6847b631a9
+      spriteID: bcc929c60fb1a1c4b93915438625cb36
       internalID: 3148422897527523625
       vertices: []
       indices: 
@@ -557,10 +557,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_17
       rect:
         serializedVersion: 2
-        x: 410
-        y: 242
-        width: 144
-        height: 113
+        x: 384
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -568,7 +568,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81fbdcd4b8f86fa40b3dad95e5912607
+      spriteID: 078fbe1e6fd2fcf4199b6a0ef8b7c32a
       internalID: -7813398772489476957
       vertices: []
       indices: 
@@ -578,10 +578,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_18
       rect:
         serializedVersion: 2
-        x: 598
-        y: 228
-        width: 133
-        height: 123
+        x: 576
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -589,7 +589,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c107cee63955b740a6b0ac4f0ca2cfd
+      spriteID: f2a4fadc2bf2e3044be26e47f728f457
       internalID: 458531217835612552
       vertices: []
       indices: 
@@ -599,10 +599,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_19
       rect:
         serializedVersion: 2
-        x: 807
-        y: 223
-        width: 126
-        height: 126
+        x: 768
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,7 +610,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cf4983058e660246aedba1f320ee4db
+      spriteID: 46eecbef48bb289488a2802bcda9f1f3
       internalID: 8772039061572752088
       vertices: []
       indices: 
@@ -620,10 +620,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_20
       rect:
         serializedVersion: 2
-        x: 28
-        y: 49
-        width: 91
-        height: 62
+        x: 0
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,7 +631,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 279024240ca64fe48830dd5280c43988
+      spriteID: fb4749f08d01dcd4daa1e72f49687732
       internalID: 1301691948937427263
       vertices: []
       indices: 
@@ -641,10 +641,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_21
       rect:
         serializedVersion: 2
-        x: 242
-        y: 48
-        width: 92
-        height: 91
+        x: 192
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -652,7 +652,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19bff90cabd6dac4a99bba191e179ebe
+      spriteID: 782c299364f7905479d8c33cd6de35f0
       internalID: -1488615886210666708
       vertices: []
       indices: 
@@ -662,10 +662,10 @@ TextureImporter:
       name: Water Skill Sprite Sheet_22
       rect:
         serializedVersion: 2
-        x: 425
-        y: 38
-        width: 111
-        height: 108
+        x: 384
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -673,7 +673,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 357785b9a157c8f4fb86c022737859f9
+      spriteID: 52ec826336f8f7147b05ee17f339e97b
       internalID: -2965729114778773014
       vertices: []
       indices: 

@@ -161,10 +161,10 @@ TextureImporter:
       name: Earth Skill Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 196
-        width: 25
-        height: 18
+        x: 0
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,7 +172,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d11715d0f6db994582397c013157fc7
+      spriteID: 1d46c816368a7e64785addcaca1f5a75
       internalID: -3598239034631772060
       vertices: []
       indices: 
@@ -182,10 +182,10 @@ TextureImporter:
       name: Earth Skill Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 196
-        width: 5
-        height: 8
+        x: 192
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,7 +193,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 645731381becc8549bc610b5963d8662
+      spriteID: 93f40b3f536ab0c498a21cdfd3d81bc1
       internalID: -5656612181541962964
       vertices: []
       indices: 
@@ -203,10 +203,10 @@ TextureImporter:
       name: Earth Skill Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 42
-        y: 196
-        width: 139
-        height: 30
+        x: 384
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,7 +214,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6548d8d189ce7f246a450fb20162ecad
+      spriteID: 725c2d92d49e57b4f9090af9ee7d0d28
       internalID: -2638541456397881308
       vertices: []
       indices: 
@@ -224,10 +224,10 @@ TextureImporter:
       name: Earth Skill Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 194
-        y: 196
-        width: 189
-        height: 50
+        x: 576
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,7 +235,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53c4916dd4e7e3b4181198f42d41df55
+      spriteID: df14661dd5494ad44951f82ec7f09e08
       internalID: -336183353808793479
       vertices: []
       indices: 
@@ -245,10 +245,10 @@ TextureImporter:
       name: Earth Skill Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 441
-        y: 197
-        width: 75
-        height: 69
+        x: 768
+        y: 192
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,7 +256,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64c036937e089be43893dfbb76e6d683
+      spriteID: bba2e2f06217a024681e1eec630f8ff0
       internalID: -6514510508065330972
       vertices: []
       indices: 
@@ -266,10 +266,10 @@ TextureImporter:
       name: Earth Skill Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 618
-        y: 197
-        width: 108
-        height: 114
+        x: 0
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,7 +277,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31afd7c1ed04fa942bf0d7eab7551a5f
+      spriteID: e332ea0c367f02043a377fd6ca93cb57
       internalID: -278092668680285466
       vertices: []
       indices: 
@@ -287,10 +287,10 @@ TextureImporter:
       name: Earth Skill Sprite Sheet_6
       rect:
         serializedVersion: 2
-        x: 798
-        y: 197
-        width: 128
-        height: 159
+        x: 192
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,7 +298,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cb025e95e83f664e81e980326e04c2a
+      spriteID: fbbd234c2058e034d9c6c52e25f5578a
       internalID: -8980964367272258283
       vertices: []
       indices: 
@@ -308,10 +308,10 @@ TextureImporter:
       name: Earth Skill Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 5
-        width: 126
-        height: 159
+        x: 384
+        y: 0
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,50 +319,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 029eb566c2f062e4fa7ec42588e3fcd2
+      spriteID: 260bb57ef483946438e86387849b8e36
       internalID: 7458426819540907598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Earth Skill Sprite Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 5
-        width: 124
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39011096cff33d947aeaac910c44341f
-      internalID: -5819385217843023279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Earth Skill Sprite Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 460
-        y: 59
-        width: 44
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a62b5fb9d3bd584fb832818679c52bb
-      internalID: 1154250050158073490
       vertices: []
       indices: 
       edges: []
