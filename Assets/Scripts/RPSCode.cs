@@ -35,6 +35,9 @@ public class RPSCode : MonoBehaviour
     public GameObject aiProfile;
     public GameObject aiDecision;
 
+    public GameObject duringButton;
+    public GameObject endButtons;
+
     public Animator a;
     public Animator p;
 
@@ -93,7 +96,8 @@ public class RPSCode : MonoBehaviour
                     state = State.Result;
                     actionScreen.SetActive(false);
                     resultScreen.SetActive(true);
-                    
+                    duringButton.SetActive(false);
+                    endButtons.SetActive(false);
                 }
                 break;
             case State.Result:
@@ -103,6 +107,7 @@ public class RPSCode : MonoBehaviour
                     {
                         case 0:
                             //Tie
+                            IsEnd();
                             playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
                             aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
                             playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[7];
@@ -113,6 +118,7 @@ public class RPSCode : MonoBehaviour
                             break;
                         case 1:
                             //Win
+                            IsEnd();
                             playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
                             aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
                             playerPoints += 1;
@@ -124,6 +130,7 @@ public class RPSCode : MonoBehaviour
                             break;
                         case 2:
                             //Lose
+                            IsEnd();
                             playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
                             aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
                             aiPoints += 1;
@@ -143,6 +150,8 @@ public class RPSCode : MonoBehaviour
                     if (playerPoints > aiPoints)
                     {
                         //Victory
+                        endGame = true;
+                        IsEnd();
                         GameObject.Find("__bgm").GetComponent<BGM_Manager>().PlayMusic("Victory Theme");
                         playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[6];
                         playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[4];
@@ -150,11 +159,12 @@ public class RPSCode : MonoBehaviour
                         aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[3];
                         gameTexts[2].text = "No problem for a True Hero!";
                         gameTexts[3].text = "I can't believe that I lost...";
-                        endGame = true;
                     }
                     else
                     {
                         //Defeat
+                        endGame = true;
+                        IsEnd();
                         GameObject.Find("__bgm").GetComponent<BGM_Manager>().PlayMusic("Defeat Theme");
                         playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[8];
                         playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[3];
@@ -162,7 +172,6 @@ public class RPSCode : MonoBehaviour
                         aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[4];
                         gameTexts[2].text = "How could I lose to you...?";
                         gameTexts[3].text = "Did you actually think you could win?";
-                        endGame = true;
                     }
                 }
                 break;
@@ -297,5 +306,36 @@ public class RPSCode : MonoBehaviour
         GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Victory Theme");
         GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Defeat Theme");
         GameObject.Find("__bgm").GetComponent<BGM_Manager>().PlayMusic("Battle Theme");
+    }
+
+    public void MainMenu()
+    {
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Victory Theme");
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Defeat Theme");
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Battle Theme");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+
+    public void Credits()
+    {
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Victory Theme");
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Defeat Theme");
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Battle Theme");
+        PlayerPrefs.SetInt("Scene", 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+
+    void IsEnd()
+    {
+        if(endGame == true)
+        {
+            endButtons.SetActive(true);
+            duringButton.SetActive(false);
+        }
+        else
+        {
+            endButtons.SetActive(false);
+            duringButton.SetActive(true);
+        }
     }
 }

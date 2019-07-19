@@ -24,9 +24,18 @@ public class Menu : MonoBehaviour
         settings = GameObject.Find("Settings");
         credits = GameObject.Find("Credits");
         fadeScreen = GameObject.Find("Fade Screen");
-        settings.SetActive(false);
-        credits.SetActive(false);
-        fadeScreen.SetActive(false);
+        if (PlayerPrefs.GetInt("Scene") == 0)
+        {
+            settings.SetActive(false);
+            credits.SetActive(false);
+            fadeScreen.SetActive(false);
+        }
+        else
+        {
+            mainMenu.SetActive(false);
+            settings.SetActive(false);
+            fadeScreen.SetActive(false);
+        }
     }
     
     void Update()
@@ -75,6 +84,7 @@ public class Menu : MonoBehaviour
             credits.SetActive(false);
         }
 
+        PlayerPrefs.SetInt("Scene", 0);
         GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Back");
         mainMenu.SetActive(true);
     }
