@@ -69,11 +69,13 @@ public class Choice
                 {
                     outcome = 2;
                     a.Play("Anim_water");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Water Attack");
                 }
                 if (AiChoice == Choices.Earth)
                 {
                     outcome = 0;
                     p.Play("Anim_fire");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Fire Attack");
                 }
                 break;
             case Choices.Earth:
@@ -81,6 +83,7 @@ public class Choice
                 {
                     outcome = 0;
                     p.Play("Anim_earth");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Earth Attack");
                 }
                 if (AiChoice == Choices.Earth)
                 {
@@ -90,6 +93,7 @@ public class Choice
                 {
                     outcome = 2;
                     a.Play("Anim_fire");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Fire Attack");
                 }
                 break;
             case Choices.Water:
@@ -97,11 +101,13 @@ public class Choice
                 {
                     outcome = 2;
                     a.Play("Anim_earth");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Earth Attack");
                 }
                 if (AiChoice == Choices.Fire)
                 {
                     outcome = 0;
                     p.Play("Anim_water");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Water Attack");
                 }
                 if (AiChoice == Choices.Water)
                 {

@@ -49,6 +49,11 @@ public class RPSCode : MonoBehaviour
 
     State state = State.Game;
 
+    void Awake()
+    {
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().PlayMusic("Battle Theme");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +80,7 @@ public class RPSCode : MonoBehaviour
                     gameScreen.SetActive(false);
                     actionScreen.SetActive(true);
                     DecisionDraw();
+                    AttackDefend();
                 }
                 break;
             case State.Action:
@@ -97,58 +103,65 @@ public class RPSCode : MonoBehaviour
                     {
                         case 0:
                             //Tie
+                            playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
+                            aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
                             playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[7];
                             aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[7];
-                            gameTexts[4].text = "That was so close!";
-                            gameTexts[5].text = "You got lucky...";
+                            gameTexts[2].text = "That was so close!";
+                            gameTexts[3].text = "You got lucky...";
                             winner = 3;
                             break;
                         case 1:
                             //Win
+                            playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
+                            aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
                             playerPoints += 1;
                             gameTexts[0].text = playerPoints.ToString();
-                            gameTexts[1].text = playerPoints.ToString();
                             aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[7];
-                            gameTexts[4].text = "Good game!";
-                            gameTexts[5].text = "I'll win next time for sure...";
+                            gameTexts[2].text = "Good game!";
+                            gameTexts[3].text = "I'll win next time for sure...";
                             winner = 3;
                             break;
                         case 2:
                             //Lose
+                            playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
+                            aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
                             aiPoints += 1;
-                            gameTexts[2].text = aiPoints.ToString();
-                            gameTexts[3].text = aiPoints.ToString();
+                            gameTexts[1].text = aiPoints.ToString();
                             playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[7];
-                            gameTexts[4].text = "Ouch, that was rough...";
-                            gameTexts[5].text = "Better luck next time.";
+                            gameTexts[2].text = "Ouch, that was rough...";
+                            gameTexts[3].text = "Better luck next time.";
                             winner = 3;
                             break;
                         default:
                             break;
                     }
                 }
-                else
+                else if((playerPoints == 3 || aiPoints == 3) && endGame != true)
                 {
+                    GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Battle Theme");
                     if (playerPoints > aiPoints)
                     {
                         //Victory
+                        GameObject.Find("__bgm").GetComponent<BGM_Manager>().PlayMusic("Victory Theme");
                         playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[6];
                         playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[4];
                         aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[8];
                         aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[3];
-                        gameTexts[4].text = "No problem for a True Hero!";
-                        gameTexts[5].text = "I can't believe that I lost...";
+                        gameTexts[2].text = "No problem for a True Hero!";
+                        gameTexts[3].text = "I can't believe that I lost...";
                         endGame = true;
                     }
                     else
                     {
                         //Defeat
+                        GameObject.Find("__bgm").GetComponent<BGM_Manager>().PlayMusic("Defeat Theme");
                         playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[8];
                         playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[3];
                         aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[6];
                         aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[4];
-                        gameTexts[4].text = "How could I lose to you...?";
-                        gameTexts[5].text = "Did you actually think you could win?";
+                        gameTexts[2].text = "How could I lose to you...?";
+                        gameTexts[3].text = "Did you actually think you could win?";
                         endGame = true;
                     }
                 }
@@ -240,6 +253,23 @@ public class RPSCode : MonoBehaviour
         }
     }
 
+    void AttackDefend()
+    {
+        switch (winner)
+        {
+            case 1:
+                playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[1];
+                aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[2];
+                break;
+            case 2:
+                playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[2];
+                aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[1];
+                break;
+            default:
+                break;
+        }
+    }
+
     public void BackToGame(bool back)
     {
         if(endGame == true)
@@ -253,16 +283,19 @@ public class RPSCode : MonoBehaviour
         playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
         aiProfile.GetComponent<SpriteRenderer>().sprite = aiSprites[5];
         aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
+        gameTexts[2].text = "";
+        gameTexts[3].text = "";
     }
 
     void ResetGame()
     {
         playerPoints = 0;
         gameTexts[0].text = "0";
-        gameTexts[1].text = "0";
         aiPoints = 0;
-        gameTexts[2].text = "0";
-        gameTexts[3].text = "0";
+        gameTexts[1].text = "0";
         endGame = false;
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Victory Theme");
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Defeat Theme");
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().PlayMusic("Battle Theme");
     }
 }
