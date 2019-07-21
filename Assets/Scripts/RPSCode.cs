@@ -12,7 +12,9 @@ public class RPSCode : MonoBehaviour
     // 0 = Tie, 1 = PlayerWin, 2 = AIWin
     int winner = 0;
     bool endGame = false;
-    int testWaitTime = 0;
+    int waitTime = 0;
+    public bool multiplayer;
+    bool animate = true;
     #endregion
 
     #region Public Game World Variables
@@ -31,9 +33,15 @@ public class RPSCode : MonoBehaviour
     public GameObject playerProfile;
     public GameObject playerDecision;
 
+    GameObject playerButtons;
+    GameObject playerCSprite;
+
     public GameObject aiSprite;
     public GameObject aiProfile;
     public GameObject aiDecision;
+
+    GameObject enemyButtons;
+    GameObject enemyCSprite;
 
     public GameObject duringButton;
     public GameObject endButtons;
@@ -62,6 +70,15 @@ public class RPSCode : MonoBehaviour
     {
         Random.InitState(System.DateTime.Now.Millisecond);
         gameScreen = GameObject.Find("Game Canvas");
+        if(multiplayer == true)
+        {
+            playerButtons = GameObject.Find("Player Buttons");
+            playerCSprite = GameObject.FindGameObjectWithTag("PCSprite");
+            playerCSprite.SetActive(false);
+            enemyButtons = GameObject.Find("Enemy Buttons");
+            enemyCSprite = GameObject.FindGameObjectWithTag("ECSprite");
+            enemyCSprite.SetActive(false);
+        }
         actionScreen = GameObject.Find("Action Canvas");
         actionScreen.SetActive(false);
         resultScreen = GameObject.Find("Result Screen");
@@ -76,24 +93,47 @@ public class RPSCode : MonoBehaviour
         switch (state)
         {
             case State.Game:
-                if (playerChoice.Selected != Choice.Choices.Undecided)
+                switch (multiplayer)
                 {
-                    AndTheWinnerIs();
-                    state = State.Action;
-                    gameScreen.SetActive(false);
-                    actionScreen.SetActive(true);
-                    DecisionDraw();
-                    AttackDefend();
+                    case false:
+                        if (playerChoice.Selected != Choice.Choices.Undecided)
+                        {
+                            AndTheWinnerIs();
+                            state = State.Action;
+                            gameScreen.SetActive(false);
+                            actionScreen.SetActive(true);
+                            //DecisionDraw();
+                            //AttackDefend();
+                        }
+                        break;
+                    case true:
+                        if (playerChoice.Selected != Choice.Choices.Undecided && aiChoice.Selected != Choice.Choices.Undecided)
+                        {
+                            AndTheWinnerIs();
+                            state = State.Action;
+                            gameScreen.SetActive(false);
+                            actionScreen.SetActive(true);
+                            //DecisionDraw();
+                        }   //AttackDefend();
+                        break;
                 }
                 break;
             case State.Action:
                 //Mateusz TODO:: Get animations on attack to run here depending on the attack
                 //Make sure to switch state variable to State.Result at the end of the animation
-                testWaitTime += 1;
-                if (testWaitTime >= 100)
+                waitTime += 1;
+                if(waitTime >= 30 && animate == true)
                 {
-                    testWaitTime = 0;
+                    PlayAnims(playerChoice, aiChoice, a, p);
+                    DecisionDraw();
+                    animate = false;
+                }
+                 else if (waitTime >= 120)
+                {
+                    waitTime = 0;
                     state = State.Result;
+                    playerDecision.GetComponent<UnityEngine.UI.Image>().sprite = choicesSprites[3];
+                    aiDecision.GetComponent<UnityEngine.UI.Image>().sprite = choicesSprites[3];
                     actionScreen.SetActive(false);
                     resultScreen.SetActive(true);
                     duringButton.SetActive(false);
@@ -101,12 +141,22 @@ public class RPSCode : MonoBehaviour
                 }
                 break;
             case State.Result:
-                if(playerPoints != 3 && aiPoints != 3)
+                animate = true;
+                if (playerPoints != 3 && aiPoints != 3)
                 {
                     switch (winner)
                     {
                         case 0:
                             //Tie
+                            if(multiplayer == false)
+                            {
+                                gameTexts[4].text = "Draw";
+                            }
+                            else
+                            {
+                                gameTexts[4].text = "Draw";
+                                gameTexts[5].text = "Draw";
+                            }
                             IsEnd();
                             playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
                             aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
@@ -118,6 +168,15 @@ public class RPSCode : MonoBehaviour
                             break;
                         case 1:
                             //Win
+                            if (multiplayer == false)
+                            {
+                                gameTexts[4].text = "You Win!";
+                            }
+                            else
+                            {
+                                gameTexts[4].text = "You Win!";
+                                gameTexts[5].text = "You Lose...";
+                            }
                             IsEnd();
                             playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
                             aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
@@ -130,6 +189,15 @@ public class RPSCode : MonoBehaviour
                             break;
                         case 2:
                             //Lose
+                            if (multiplayer == false)
+                            {
+                                gameTexts[4].text = "You Lose...";
+                            }
+                            else
+                            {
+                                gameTexts[4].text = "You Lose...";
+                                gameTexts[5].text = "You Win!";
+                            }
                             IsEnd();
                             playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
                             aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[0];
@@ -195,13 +263,42 @@ public class RPSCode : MonoBehaviour
                 playerChoice.Selected = Choice.Choices.Water;
                 break;
         }
+        if(multiplayer == true)
+        {
+            playerButtons.SetActive(false);
+            playerCSprite.SetActive(true);
+        }
+    }
+
+    public void Choose2(int choice)
+    {
+        switch (choice)
+        {
+            case 0:
+                aiChoice.Selected = Choice.Choices.Fire;
+                break;
+            case 1:
+                aiChoice.Selected = Choice.Choices.Earth;
+                break;
+            case 2:
+                aiChoice.Selected = Choice.Choices.Water;
+                break;
+        }
+        if (multiplayer == true)
+        {
+            enemyButtons.SetActive(false);
+            enemyCSprite.SetActive(true);
+        }
     }
 
     private void AndTheWinnerIs()
     {
-        aiChoice.AIChoice();
+        if (multiplayer != true)
+        {
+            aiChoice.AIChoice();
+        }
 
-        switch (playerChoice.CheckWinner(aiChoice.Selected, a, p))
+        switch (playerChoice.CheckWinner(aiChoice.Selected))
         {
             case 0:
                 winner = 1;
@@ -214,6 +311,61 @@ public class RPSCode : MonoBehaviour
                 break;
             default:
                 Debug.Log("Uh Oh...");
+                break;
+        }
+    }
+
+    void PlayAnims(Choice playerChoice, Choice AiChoice, Animator a, Animator p)
+    {
+        switch (playerChoice.Selected)
+        {
+            case Choice.Choices.Fire:
+                if (AiChoice.Selected == Choice.Choices.Water)
+                {
+                    a.Play("Anim_water");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Water Attack");
+                    playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[2];
+                    aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[1];
+                }
+                if (AiChoice.Selected == Choice.Choices.Earth)
+                {
+                    p.Play("Anim_fire");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Fire Attack");
+                    playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[1];
+                    aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[2];
+                }
+                break;
+            case Choice.Choices.Earth:
+                if (AiChoice.Selected == Choice.Choices.Water)
+                {
+                    p.Play("Anim_earth");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Earth Attack");
+                    playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[1];
+                    aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[2];
+                }
+                if (AiChoice.Selected == Choice.Choices.Fire)
+                {
+                    a.Play("Anim_fire");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Fire Attack");
+                    playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[2];
+                    aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[1];
+                }
+                break;
+            case Choice.Choices.Water:
+                if (AiChoice.Selected == Choice.Choices.Earth)
+                {
+                    a.Play("Anim_earth");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Earth Attack");
+                    playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[2];
+                    aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[1];
+                }
+                if (AiChoice.Selected == Choice.Choices.Fire)
+                {
+                    p.Play("Anim_water");
+                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Water Attack");
+                    playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[1];
+                    aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[2];
+                }
                 break;
         }
     }
@@ -265,23 +417,6 @@ public class RPSCode : MonoBehaviour
         }
     }
 
-    void AttackDefend()
-    {
-        switch (winner)
-        {
-            case 1:
-                playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[1];
-                aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[2];
-                break;
-            case 2:
-                playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[2];
-                aiSprite.GetComponent<SpriteRenderer>().sprite = aiSprites[1];
-                break;
-            default:
-                break;
-        }
-    }
-
     public void BackToGame(bool back)
     {
         if(endGame == true)
@@ -290,6 +425,10 @@ public class RPSCode : MonoBehaviour
         }
         resultScreen.SetActive(back);
         gameScreen.SetActive(true);
+        playerButtons.SetActive(true);
+        playerCSprite.SetActive(false);
+        enemyButtons.SetActive(true);
+        enemyCSprite.SetActive(false);
         state = State.Game;
         playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[5];
         playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];

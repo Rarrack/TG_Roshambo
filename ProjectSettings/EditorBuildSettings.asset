@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RPS Game.unity
     guid: 74894a970418b22498190b5ce69e20b6
+  - enabled: 1
+    path: Assets/Scenes/RPS Local Versus.unity
+    guid: e3ec2cf8cf0fba04dae0a3cb67b90b7a
   m_configObjects: {}

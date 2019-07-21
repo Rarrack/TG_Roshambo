@@ -53,7 +53,7 @@ public class Choice
         }
     }
 
-    public int CheckWinner(Choices AiChoice, Animator a, Animator p)
+    public int CheckWinner(Choices AiChoice)
     {
         int outcome = 3;
 
@@ -68,22 +68,16 @@ public class Choice
                 if (AiChoice == Choices.Water)
                 {
                     outcome = 2;
-                    a.Play("Anim_water");
-                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Water Attack");
                 }
                 if (AiChoice == Choices.Earth)
                 {
                     outcome = 0;
-                    p.Play("Anim_fire");
-                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Fire Attack");
                 }
                 break;
             case Choices.Earth:
                 if (AiChoice == Choices.Water)
                 {
                     outcome = 0;
-                    p.Play("Anim_earth");
-                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Earth Attack");
                 }
                 if (AiChoice == Choices.Earth)
                 {
@@ -92,22 +86,16 @@ public class Choice
                 if (AiChoice == Choices.Fire)
                 {
                     outcome = 2;
-                    a.Play("Anim_fire");
-                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Fire Attack");
                 }
                 break;
             case Choices.Water:
                 if (AiChoice == Choices.Earth)
                 {
                     outcome = 2;
-                    a.Play("Anim_earth");
-                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Earth Attack");
                 }
                 if (AiChoice == Choices.Fire)
                 {
                     outcome = 0;
-                    p.Play("Anim_water");
-                    GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Water Attack");
                 }
                 if (AiChoice == Choices.Water)
                 {

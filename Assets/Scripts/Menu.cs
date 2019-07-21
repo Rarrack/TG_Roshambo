@@ -16,6 +16,7 @@ public class Menu : MonoBehaviour
     GameObject fadeScreen;
     int testWaitTime = 0;
     bool fadeStart = false;
+    public bool multiplayer;
 
     void Awake()
     {
@@ -55,7 +56,14 @@ public class Menu : MonoBehaviour
             testWaitTime += 1;
             if (testWaitTime >= 55)
             {
-                SceneManager.LoadScene(2);
+                if (multiplayer != true)
+                {
+                    SceneManager.LoadScene(2);
+                }
+                else
+                {
+                    SceneManager.LoadScene(3);
+                }
             }
         }
     }
@@ -67,6 +75,16 @@ public class Menu : MonoBehaviour
         fadeScreen.SetActive(true);
         fadeScreen.GetComponent<Animator>().Play("Anim_fade");
         fadeStart = true;
+    }
+
+    public void PlayMultiplayer()
+    {
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Main Theme");
+        GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Start Game");
+        fadeScreen.SetActive(true);
+        fadeScreen.GetComponent<Animator>().Play("Anim_fade");
+        fadeStart = true;
+        multiplayer = true;
     }
 
     public void Settings()
