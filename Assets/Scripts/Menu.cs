@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
@@ -9,12 +10,17 @@ public class Menu : MonoBehaviour
     GameObject settings;
     GameObject credits;
 
+    public Slider bgmSlider;
+    public Slider sfxSlider;
+
     GameObject fadeScreen;
     int testWaitTime = 0;
     bool fadeStart = false;
 
     void Awake()
     {
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().musicFiles[0].source.volume = PlayerPrefs.GetFloat("BGM Volume");
+        GameObject.Find("__sfx").GetComponent<SFX_Manager>().soundFiles[0].source.volume = PlayerPrefs.GetFloat("SFX Volume");
         GameObject.Find("__bgm").GetComponent<BGM_Manager>().PlayMusic("Main Theme");
     }
     
@@ -24,6 +30,10 @@ public class Menu : MonoBehaviour
         settings = GameObject.Find("Settings");
         credits = GameObject.Find("Credits");
         fadeScreen = GameObject.Find("Fade Screen");
+
+        bgmSlider.value = PlayerPrefs.GetFloat("BGM Volume", 0.7f);
+        sfxSlider.value = PlayerPrefs.GetFloat("SFX Volume", 0.7f);
+
         if (PlayerPrefs.GetInt("Scene") == 0)
         {
             settings.SetActive(false);
@@ -64,6 +74,8 @@ public class Menu : MonoBehaviour
         GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Select");
         mainMenu.SetActive(false);
         settings.SetActive(true);
+        bgmSlider.value = PlayerPrefs.GetFloat("BGM Volume");
+        sfxSlider.value = PlayerPrefs.GetFloat("SFX Volume");
     }
 
     public void Credits()
@@ -87,5 +99,31 @@ public class Menu : MonoBehaviour
         PlayerPrefs.SetInt("Scene", 0);
         GameObject.Find("__sfx").GetComponent<SFX_Manager>().PlaySound("Back");
         mainMenu.SetActive(true);
+    }
+
+    public void SetBGMVolume(float vol)
+    {
+        PlayerPrefs.SetFloat("BGM Volume", vol);
+    }
+
+    public void SetSFXVolume(float vol)
+    {
+        PlayerPrefs.SetFloat("SFX Volume", vol);
+    }
+
+    public void UpdateBGMVolumes()
+    {
+        foreach(AudioFile bgm in GameObject.Find("__bgm").GetComponent<BGM_Manager>().musicFiles)
+        {
+            bgm.source.volume = PlayerPrefs.GetFloat("BGM Volume");
+        }
+    }
+
+    public void UpdateSFXVolumes()
+    {
+        foreach (AudioFile sfx in GameObject.Find("__sfx").GetComponent<SFX_Manager>().soundFiles)
+        {
+            sfx.source.volume = PlayerPrefs.GetFloat("SFX Volume");
+        }
     }
 }

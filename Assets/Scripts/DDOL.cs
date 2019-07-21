@@ -11,5 +11,10 @@ public class DDOL : MonoBehaviour
         {
             PlayerPrefs.SetInt("Scene", 0);
         }
+
+        if (!PlayerPrefs.HasKey("Total Wins"))
+        {
+            PlayerPrefs.SetInt("Total Wins", 0);
+        }
     }
 }

@@ -150,6 +150,9 @@ public class RPSCode : MonoBehaviour
                     if (playerPoints > aiPoints)
                     {
                         //Victory
+                        int i = PlayerPrefs.GetInt("Total Wins");
+                        i += 1;
+                        PlayerPrefs.SetInt("Total Wins", i);
                         endGame = true;
                         IsEnd();
                         GameObject.Find("__bgm").GetComponent<BGM_Manager>().PlayMusic("Victory Theme");

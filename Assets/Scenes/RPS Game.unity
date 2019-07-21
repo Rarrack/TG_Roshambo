@@ -803,10 +803,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1332952155}
   - {fileID: 564297255}
   - {fileID: 406356677}
   - {fileID: 1151313263}
+  - {fileID: 1332952155}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   - component: {fileID: 406356679}
   - component: {fileID: 406356678}
   - component: {fileID: 406356680}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: Player Response
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,7 +1026,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 202277810}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1299,7 +1299,7 @@ RectTransform:
   - {fileID: 1457888263}
   - {fileID: 2142822966}
   m_Father: {fileID: 202277810}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2023,7 +2023,7 @@ GameObject:
   - component: {fileID: 1151313265}
   - component: {fileID: 1151313264}
   - component: {fileID: 1151313266}
-  m_Layer: 5
+  m_Layer: 4
   m_Name: AI Response
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2042,7 +2042,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 202277810}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2400,7 +2400,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 6656501003404573642, guid: 7eeaeedd43a93544fb70b7007887f529,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2580,7 +2580,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -4595340970644333092, guid: 78c1f654b21b4fa4a81ef7b3e26749f7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2755,7 +2755,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 96735a2d62fd8034295d2cd88787c84b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2800,12 +2800,12 @@ RectTransform:
   - {fileID: 1534990436}
   - {fileID: 1191805977}
   m_Father: {fileID: 202277810}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -0.024963}
-  m_SizeDelta: {x: 716, y: 1279.9}
+  m_AnchoredPosition: {x: 0, y: -0.024963}
+  m_SizeDelta: {x: 720, y: 1279.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332952156
 MonoBehaviour:
@@ -3734,7 +3734,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: ea0a5ca14c0d23f409ff14f595eacc36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

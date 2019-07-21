@@ -209,25 +209,25 @@ MonoBehaviour:
   musicFiles:
   - audioName: Main Theme
     audioClip: {fileID: 8300000, guid: d00f3845ed975d5428ae99a80a6bbc7b, type: 3}
-    volume: 0.7
+    volume: 1
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 0
   - audioName: Battle Theme
     audioClip: {fileID: 8300000, guid: d51c795ecc9cd374998a48997e19bfdb, type: 3}
-    volume: 0.7
+    volume: 1
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 0
   - audioName: Victory Theme
     audioClip: {fileID: 8300000, guid: 3bb09d8821880b943bdd88d3360a5411, type: 3}
-    volume: 0.7
+    volume: 1
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: Defeat Theme
     audioClip: {fileID: 8300000, guid: 3122d3542849fba44adc5ea151b33f08, type: 3}
-    volume: 0.7
+    volume: 1
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
@@ -277,84 +277,40 @@ MonoBehaviour:
   soundFiles:
   - audioName: Start Game
     audioClip: {fileID: 8300000, guid: 1a666725cd2c7a740b78b8ad77f389dd, type: 3}
-    volume: 0.7
+    volume: 1
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: Select
     audioClip: {fileID: 8300000, guid: 245420271979ec94fa368eb55e6c1939, type: 3}
-    volume: 0.7
+    volume: 1
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: Back
     audioClip: {fileID: 8300000, guid: 54b52ddeeed2ff84d97b48310d0c9641, type: 3}
-    volume: 0.7
+    volume: 1
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: Earth Attack
     audioClip: {fileID: 8300000, guid: 767fe5a0dae6b5244906db48e9d32362, type: 3}
-    volume: 0.7
+    volume: 1
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: Fire Attack
     audioClip: {fileID: 8300000, guid: 72355e67185e2d446a290119dbbaeab8, type: 3}
-    volume: 0.7
+    volume: 1
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
   - audioName: Water Attack
     audioClip: {fileID: 8300000, guid: fb88faafa0b48664189d0c6a17f0143f, type: 3}
-    volume: 0.7
+    volume: 1
     source: {fileID: 0}
     isLooping: 0
     playOnAwake: 0
---- !u!1 &1296589209
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1296589210}
-  - component: {fileID: 1296589211}
-  m_Layer: 0
-  m_Name: __vo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1296589210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296589209}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5294843, y: -0.38284394, z: 81.64128}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1296589211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296589209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75948e37aaf301947b340110a0c16457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  voiceFiles: []
 --- !u!1 &1746551848
 GameObject:
   m_ObjectHideFlags: 0

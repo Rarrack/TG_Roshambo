@@ -31,7 +31,7 @@ public class BGM_Manager : MonoBehaviour
         {
             file.source = gameObject.AddComponent<AudioSource>();
             file.source.clip = file.audioClip;
-            file.source.volume = file.volume;
+            file.source.volume = PlayerPrefs.GetFloat("SFX Volume");
             file.source.loop = file.isLooping;
 
             //if(file.playOnAwake)
