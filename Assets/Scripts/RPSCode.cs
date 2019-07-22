@@ -70,11 +70,11 @@ public class RPSCode : MonoBehaviour
     {
         Random.InitState(System.DateTime.Now.Millisecond);
         gameScreen = GameObject.Find("Game Canvas");
-        if(multiplayer == true)
+        playerButtons = GameObject.Find("Player Buttons");
+        playerCSprite = GameObject.FindGameObjectWithTag("PCSprite");
+        playerCSprite.SetActive(false);
+        if (multiplayer == true)
         {
-            playerButtons = GameObject.Find("Player Buttons");
-            playerCSprite = GameObject.FindGameObjectWithTag("PCSprite");
-            playerCSprite.SetActive(false);
             enemyButtons = GameObject.Find("Enemy Buttons");
             enemyCSprite = GameObject.FindGameObjectWithTag("ECSprite");
             enemyCSprite.SetActive(false);
@@ -427,8 +427,11 @@ public class RPSCode : MonoBehaviour
         gameScreen.SetActive(true);
         playerButtons.SetActive(true);
         playerCSprite.SetActive(false);
-        enemyButtons.SetActive(true);
-        enemyCSprite.SetActive(false);
+        if(multiplayer == true)
+        {
+            enemyButtons.SetActive(true);
+            enemyCSprite.SetActive(false);
+        }
         state = State.Game;
         playerProfile.GetComponent<SpriteRenderer>().sprite = playerSprites[5];
         playerSprite.GetComponent<SpriteRenderer>().sprite = playerSprites[0];
