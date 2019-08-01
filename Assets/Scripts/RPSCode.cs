@@ -13,11 +13,12 @@ public class RPSCode : MonoBehaviour
     int winner = 0;
     bool endGame = false;
     int waitTime = 0;
-    public bool multiplayer;
     bool animate = true;
     #endregion
 
     #region Public Game World Variables
+    public bool multiplayer;
+
     public GameObject[] backgrounds;
 
     public UnityEngine.UI.Text[] gameTexts;
@@ -44,7 +45,7 @@ public class RPSCode : MonoBehaviour
     GameObject enemyCSprite;
 
     public GameObject duringButton;
-    public GameObject endButtons;
+    public GameObject[] endButtons;
 
     public Animator a;
     public Animator p;
@@ -137,7 +138,10 @@ public class RPSCode : MonoBehaviour
                     actionScreen.SetActive(false);
                     resultScreen.SetActive(true);
                     duringButton.SetActive(false);
-                    endButtons.SetActive(false);
+                    foreach(GameObject button in endButtons)
+                    {
+                        button.SetActive(false);
+                    }
                 }
                 break;
             case State.Result:
@@ -483,12 +487,28 @@ public class RPSCode : MonoBehaviour
     {
         if(endGame == true)
         {
-            endButtons.SetActive(true);
+            foreach (GameObject button in endButtons)
+            {
+                button.SetActive(true);
+            }
+            if(PlayerPrefs.GetInt("Total Wins") == 3 || PlayerPrefs.GetInt("Total Wins") == 5)
+            {
+                endButtons[0].SetActive(true);
+                endButtons[1].SetActive(false);
+            }
+            else
+            {
+                endButtons[0].SetActive(false);
+                endButtons[1].SetActive(true);
+            }
             duringButton.SetActive(false);
         }
         else
         {
-            endButtons.SetActive(false);
+            foreach (GameObject button in endButtons)
+            {
+                button.SetActive(false);
+            }
             duringButton.SetActive(true);
         }
     }
