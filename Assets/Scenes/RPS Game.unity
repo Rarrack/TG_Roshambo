@@ -2326,7 +2326,7 @@ GameObject:
   - component: {fileID: 1170356190}
   - component: {fileID: 1170356189}
   m_Layer: 5
-  m_Name: Replay
+  m_Name: Code
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2396,8 +2396,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 519420030}
-        m_MethodName: BackToGame
-        m_Mode: 6
+        m_MethodName: Settings
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3964,7 +3964,7 @@ RectTransform:
   m_GameObject: {fileID: 1922149417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.775, y: 1, z: 1}
+  m_LocalScale: {x: 0.69749993, y: 0.875, z: 1}
   m_Children: []
   m_Father: {fileID: 1170356188}
   m_RootOrder: 0
@@ -4007,7 +4007,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Replay
+  m_Text: Secret Code
 --- !u!222 &1922149420
 CanvasRenderer:
   m_ObjectHideFlags: 0

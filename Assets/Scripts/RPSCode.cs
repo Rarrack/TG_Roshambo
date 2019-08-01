@@ -470,6 +470,15 @@ public class RPSCode : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 
+    public void Settings()
+    {
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Victory Theme");
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Defeat Theme");
+        GameObject.Find("__bgm").GetComponent<BGM_Manager>().StopMusic("Battle Theme");
+        PlayerPrefs.SetInt("Scene", 2);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+
     void IsEnd()
     {
         if(endGame == true)

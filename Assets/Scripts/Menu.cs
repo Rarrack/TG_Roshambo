@@ -13,6 +13,8 @@ public class Menu : MonoBehaviour
     public Slider bgmSlider;
     public Slider sfxSlider;
 
+    public GameObject[] Locks;
+
     GameObject fadeScreen;
     int testWaitTime = 0;
     bool fadeStart = false;
@@ -41,11 +43,25 @@ public class Menu : MonoBehaviour
             credits.SetActive(false);
             fadeScreen.SetActive(false);
         }
-        else
+        else if(PlayerPrefs.GetInt("Scene") == 1)
         {
             mainMenu.SetActive(false);
             settings.SetActive(false);
             fadeScreen.SetActive(false);
+        }
+        else
+        {
+            mainMenu.SetActive(false);
+            credits.SetActive(false);
+            fadeScreen.SetActive(false);
+            if(PlayerPrefs.GetInt("Total Wins") >= 3)
+            {
+                Locks[0].SetActive(false);
+            }
+            if (PlayerPrefs.GetInt("Total Wins") >= 5)
+            {
+                Locks[1].SetActive(false);
+            }
         }
     }
     
@@ -94,6 +110,14 @@ public class Menu : MonoBehaviour
         settings.SetActive(true);
         bgmSlider.value = PlayerPrefs.GetFloat("BGM Volume");
         sfxSlider.value = PlayerPrefs.GetFloat("SFX Volume");
+        if (PlayerPrefs.GetInt("Total Wins") >= 3)
+        {
+            Locks[0].SetActive(false);
+        }
+        if (PlayerPrefs.GetInt("Total Wins") >= 5)
+        {
+            Locks[1].SetActive(false);
+        }
     }
 
     public void Credits()
